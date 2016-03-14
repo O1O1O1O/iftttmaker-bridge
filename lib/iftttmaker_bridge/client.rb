@@ -1,6 +1,6 @@
 require 'httparty'
 
-module IFTTTGateway
+module IFTTTMakerBridge
   class Client
     BASE_URL = 'https://maker.ifttt.com'
     VALUE_KEYS = [:value1, :value2, :value3]
@@ -15,8 +15,6 @@ module IFTTTGateway
     end
 
     def trigger(event, data={})
-      puts trigger_url(event, maker_key)
-      puts data
       result = HTTParty.post(
         trigger_url(event, maker_key),
         query: request_data(data)
@@ -29,7 +27,7 @@ module IFTTTGateway
 
     private
     def maker_key(key = nil)
-      @maker_key ||= (key || ENV.fetch('MAKER_KEY', 'cOMTqvxd8vQXl4Ae3DDwBe'))
+      @maker_key ||= (key || ENV['MAKER_KEY'])
     end
 
 
