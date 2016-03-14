@@ -1,0 +1,63 @@
+[
+  {
+    "name": "ifttt-maker",
+    "display_name": "IFTTT Maker Channel",
+    "description": "Trigger events on an IFTTT Maker channel",
+    "logo_url": "https://apkdot.com/media/resizer/64x64/r/icon.apkdot.com/com.ifttt.ifttt.png",
+    "icon_url": "https://d3rnbxvnd0hlox.cloudfront.net/assets/favicon-e72e2be80bf04e02801ca83f6f61f954.ico",
+    "authentication_type": "custom",
+    "authentication_configuration": [
+      {
+        "key": {
+          "source": "input",
+          "display": "Maker Channel Key",
+          "mandatory": true,
+          "type": "text",
+          "store": true,
+          "help": "Find at https://ifttt.com/maker"
+        }
+      }
+    ],
+    "auth_validation_endpoint": "https://6f6060f7.ngrok.io/talkdesk/authorize",
+    "contact_types": [
+    ],
+    "active": false
+  },
+{
+  "provider": "ifttt-maker",
+  "active": true,
+  "name": "trigger-event",
+  "display": "Trigger Event",
+  "description": "Triggers an event on a Maker Channel by name",
+  "endpoint": "https://6f6060f7.ngrok.io/talkdesk/trigger",
+  "scoping": [
+    "automation"
+  ],
+  "inputs": [
+    {
+      "key": "event",
+      "name": "Name of event to trigger",
+      "type": "text",
+      "mandatory": true
+    },
+    {
+      "key": "value1",
+      "name": "Value1 event parameter",
+      "type": "text",
+      "mandatory": false
+    },
+    {
+      "key": "value2",
+      "name": "Value2 event parameter",
+      "type": "text",
+      "mandatory": false
+    },
+    {
+      "key": "value3",
+      "name": "Value3 event parameter",
+      "type": "text",
+      "mandatory": false
+    }
+  ]
+}
+]
