@@ -1,0 +1,37 @@
+{
+  "provider": "ifttt-maker",
+  "active": true,
+  "name": "trigger-event",
+  "display": "Trigger Event",
+  "description": "Triggers an event on a Maker Channel by name",
+  "endpoint": "https://iftttmaker-bridge.herokuapp.com/trigger",
+  "scoping": [
+    "automation"
+  ],
+  "inputs": [
+    {
+      "key": "event",
+      "name": "Name of event to trigger",
+      "type": "text",
+      "mandatory": true
+    },
+    {
+      "key": "value1",
+      "name": "Value1 event parameter",
+      "type": "text",
+      "mandatory": false
+    },
+    {
+      "key": "value2",
+      "name": "Value2 event parameter",
+      "type": "text",
+      "mandatory": false
+    },
+    {
+      "key": "value3",
+      "name": "Value3 event parameter",
+      "type": "text",
+      "mandatory": false
+    }
+  ]
+}

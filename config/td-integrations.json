@@ -1,0 +1,23 @@
+{
+  "name": "ifttt-maker",
+  "display_name": "IFTTT Maker Channel",
+  "description": "Trigger events on an IFTTT Maker channel",
+  "logo_url": "https://apkdot.com/media/resizer/60x60/r/icon.apkdot.com/com.ifttt.ifttt.png",
+  "icon_url": "https://apkdot.com/media/resizer/40x40/r/icon.apkdot.com/com.ifttt.ifttt.png",
+  "authentication_type": "custom",
+  "authentication_configuration": [
+    {
+      "key": {
+        "source": "input",
+        "display": "Maker Channel Key",
+        "mandatory": true,
+        "type": "text",
+        "store": true,
+        "help": "Find at https://ifttt.com/maker"
+      }
+    }
+  ],
+  "auth_validation_endpoint": "https://iftttmaker-bridge.herokuapp.com/authorize",
+  "contact_types": [],
+  "active": false
+}
